@@ -1,20 +1,54 @@
 <!DOCTYPE HTML>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'></head>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.11.1.min (1).js"></script>
+<script src="js/main.js"></script>
+</head>
 <body>
 	<header>
 	<div class="nav">
-		<img class="logo" src="images/treelogo.png">
+		<div class="logo-header">
+			<img class="logo-tree" src="images/treelogo.png">
+			<img class="logo-mineral" src="images/minerals.png">
+			<h1 class="header">trees and minerals</h1>
+		</div>	
 		<ul class="top-navigation">
 			<li><a href="#">home</a></li>
 	   		<li><a href="#">about</a></li>
-	    	<li><a href="#">products</a></li>
-	   	    <li><a href="#">testing</a></li>
+	    	<li><a href="#">minerals</a></li>
+	   	    <li><a href="#">trees</a></li>
 		</ul>
 	</div>
 	</header>
+	<div class="main">
+		<div class="carousel">
+			<div id="buttons">
+        		<a href="#" id="prev">prev</a>
+        		<a href="#" id="next">next</a>
+        		<div class="clear"></div>
+    	</div>
+    <div class="clear"></div>
+   	 <div id="slides"> 
+       	<ul>
+	        <li><img src="images/treeshade.jpg"  alt="a shaded forest"/></li>
+	        <li><img src="images/mountainmoss.jpeg"  alt=""/></li>
+	        <li><img src="images/orange.jpeg"   alt="Slide 3"/></li>
+	        <li><img src="images/treeroad.jpg"   alt="Slide 2"/></li>
+	        <li><img src="images/sandandrock.jpeg"   alt="Slide 2"/></li>
+        </ul>
+        <div class="clear"></div>	
+    </div>
+		</div>
+	</div>
 	<footer>
+		<ul class="footer-links">
+			<li>About</li>
+			<li>Mineral Class</li>
+			<li>Tree Types</li>
+			<li>Copyright &copy; 2014</li>
+		</ul>
 	</footer>
 </body>
 </html>
