@@ -51,7 +51,7 @@ table {
 body{
 	font-family: 'Quattrocento Sans', sans-serif;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, blockquote{
 	font-family: 'Lobster', cursive;
 }
 
@@ -73,7 +73,11 @@ a{
 
 header{
 	width:100%;
-	position: relative;
+	position: fixed;
+	top: 0;
+	height: auto;
+	z-index: 100000;
+	background-color: rgba(253, 253, 253, 0.6);
 }
 
 .nav{
@@ -119,6 +123,11 @@ ul.footer-links a:hover{
     transition-timing-function: linear;
 }
 
+.main{
+	margin-top: 140px;
+	padding:10px;
+}
+
 #carousel {
     max-width:100%;
     height:900px;     
@@ -130,7 +139,6 @@ ul.footer-links a:hover{
     position:relative;
     max-width:100%;
     height:900px; 
-    border:1px solid #ccc;
 }
 /* remove the list styles, width : item width * total items */    
 #slides ul {
@@ -148,9 +156,6 @@ ul.footer-links a:hover{
     height:900px;    
     float:left;
 }
-#slides li img {
-    padding:5px;
-}
 
 #buttons{
 	position: relative;
@@ -162,11 +167,24 @@ ul.footer-links a:hover{
 	right: 0;
 }
 
+#quote{
+	background-color: rgba(77,58,56, 0.9);
+	padding: 70px 0;
+}
+
+#quote blockquote {
+	text-align: center;
+	font-size: 50px;
+	text-transform: capitalize;
+	color: #fff;
+	line-height: 70px;
+}
+
 footer{
 	margin: 50px 0;
 }
 ul.footer-links {
-text-align: center;
+	text-align: center;
 }
 
 ul.footer-links li{
