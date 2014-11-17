@@ -223,7 +223,7 @@ ul.footer-links li{
 
 /*Media queries*/
 
-/*carousel height defined. If you have a recommendation on how to remove the height decs, it would be appreciated*/
+/*carousel height defined. If you have a recommendation on how to remove the height decs, it would be appreciated. The breakpoint I chose are based on where things were breaking, as well as common device widths*/
 @media only screen  and (max-width : 1235px) {
 #slides{
 	height: 790px;
