@@ -223,22 +223,28 @@ ul.footer-links li{
 
 /*Media queries*/
 
-/*carousel height defined*/
+/*carousel height defined. If you have a recommendation on how to remove the height decs, it would be appreciated*/
 @media only screen  and (max-width : 1235px) {
 #slides{
 	height: 790px;
 }
 }
 
-@media only screen and (min-width : 1000px) and (max-width : 1100px) {
+@media only screen and (min-width : 1000px) and (max-width : 1235px) {
 #slides{
 	height: 650px;
 }
 }
 
-@media only screen and (min-width : 800px) and (max-width : 990px) {
+@media only screen and (min-width : 840px) and (max-width : 990px) {
 #slides{
 	height: 623px;
+}
+}
+
+@media only screen and (min-width : 800px) and (max-width : 840px) {
+#slides{
+	height: 513px;
 }
 }
 
@@ -266,7 +272,7 @@ ul.footer-links li{
 }
 }
 
-@media only screen and (min-width : 430px) and (max-width : 490px) {
+@media only screen and (min-width : 430px) and (max-width : 499px) {
 #slides{
 	height: 256px;
 }
@@ -285,7 +291,7 @@ ul.footer-links li{
 }
 /*end carousel height defined*/
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 500px) {
 .layered-quote{
 	font-size: 21px;
 }
@@ -305,9 +311,26 @@ ul.top-navigation li{
 }
 }
 
-@media only screen and (min-width : 768px) and (max-width : 1180px) {
+@media only screen and (min-width : 1000px) and (max-width : 1180px) {
 #three-images-section img {
 	padding: 0 10px;
+}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1000px) {
+#three-images-section img {
+	padding: 10px 70px;
+}
+}
+
+@media only screen and (min-width : 500px) and (max-width : 900px) {
+ #quote blockquote {
+	font-size: 30px;
+	line-height: 33px;
+}
+
+.layered-quote{
+	font-size: 31px;
 }
 }
 
