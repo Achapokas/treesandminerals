@@ -8,8 +8,16 @@
 </head>
 <body>
 	<header>
+	<!-- Consider reorganizing the header markup to be more semantic:
+	<header>
+		<p class="logo">...</p>
+		<nav role="navigation">
+			<ul>...</ul>
+	-->
 	<div class="nav">
 		<div class="logo-header">
+			<!-- I disagree with the usage of h1 for the logo, the site name or logo can be semantically represented in a header element wrapped in a <p> with rich snippet attribution (for example: http://schema.org/Organization) -->
+			<!-- class of header is also confusing when an element of that name exists -->
 			<h1 class="header">trees and minerals</h1>
 		</div>	
 		<ul class="top-navigation">
@@ -20,15 +28,30 @@
 		</ul>
 	</div>
 	</header>
+		<!-- why not <main>? -->
 		<div class="main">
+			<!-- since this section is clearly a banner to the entire site, consider a more semantic solution:
+			<main>
+				<header>
+					<h1>Page title</h1>
+					<div class="carousel">...</div>
+				</header>
+				<section>...</section>
+			</main>
+			-->
 			<div class="carousel">
+				<!-- Your use of IDs vs. classes seem to not follow any convention other than you use an ID when you need to possibly target it via JS. Consider using a more consistent way to target the DOM via JS that doesn't rely on IDs -- since IDs can change over time and will cause additional maintenance of both HTML, CSS and JavaScript -->
 				<div id="buttons">
+				<!-- If links point to "#", their use has no value. Consider targeting a specific element or removing the href attribute and only applying a JS event to the object -->
+				<!-- Consider utilizing the button element in place of links -->
 	        		<a href="#" id="prev">prev</a>
 	        		<a href="#" id="next">next</a>
+	        		<!-- Clearing floated elements with an extra empty element, in this example div.clear, is not an efficient way to solve the problem. Consider adding the popular .clearfix solution on the parent container that contains the floats -->
 	        		<div class="clear"></div>
 	    	</div>
 	    <div class="clear"></div>
 	   	 <div id="slides"> 
+	   	 <!-- an ordered list may make more sense if these images are sequenced in any way, but minor -->
 	       	<ul>
 		        <li><img src="images/treeshade.jpg"  alt="a shaded forest"/></li>
 		        <li><img src="images/mountainmoss.jpeg"  alt="mountain landscape"/></li>
@@ -39,6 +62,27 @@
 	        <div class="clear"></div>	
 	    </div>
 			</div>
+		<!-- Since this content is part of the primary navigation, I'd consider segmenting each section into a semantic element to distinguish each page, for example:
+		<section id="about">...</section>
+		<section id="minerals">...</section>
+		<section id="trees">...</section>
+		<section id="contact">...</section>
+		
+		Also, each section (or page) should have it's own heading so that users who aren't visualizing the information have context as to where they are, for instance:
+		<section id="about">
+			<header>
+				<h1>About</h1>
+			</header>
+			<main>...</main>
+		</sectoin>
+		-->
+		<!-- #quote > blockquote seems like extra markup for a native element, consider this revision:
+		<blockquote>
+			<p>...</p>
+			<cite>Author Name</cite>
+		</blockquote>
+		Since the "-" is a visual element specific to the design, I'd recommend using a :before to include it in your CSS
+		-->
 		<div id="quote">
 			<blockquote>the power of imagination makes us infinite</blockquote>
 			<blockquote class="attribution"> - John Muir</blockquote>
@@ -60,6 +104,15 @@
 			</div>	
 		</div>	
 	</div>
+	<!-- This could also be simplified, for example:
+	<footer>
+		<ul>
+			<li><a href="#about">About</a></li>
+			...
+		</ul>
+		<p class="copyright">...</p>
+	</footer>
+	-->
 	<footer>
 		<ul class="footer-links">
 			<li><a href="#">about</a></li>
