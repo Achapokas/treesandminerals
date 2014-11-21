@@ -1,3 +1,3 @@
-anthro_set
+Mock up design
 ==========
-Question sets and one page responsive site
+one page responsive site
