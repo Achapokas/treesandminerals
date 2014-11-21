@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5, h6, blockquote{
 	text-transform: capitalize;
 }
 
+h1{
+	font-size: 30px;
+	color:#fff;
+}
+
 body{
 	font-size:100%;
 }
@@ -125,6 +130,16 @@ ul.footer-links a:hover{
     transition-timing-function: linear;
 }
 
+.column {
+	width: 25%;
+	float: left;
+	padding: 20px;
+}
+
+section#about {
+	overflow: hidden;
+}
+
 #about, #trees{
 	background-color: rgba(77,58,56, 0.9);
 	padding: 70px 0;
@@ -140,13 +155,12 @@ ul.footer-links a:hover{
 }
 
 #minerals{
-	text-align: center;
 	padding: 70px 0;
 	background-color: rgb(0, 69, 101);
 }
 
-#minerals img{
-	padding: 0 40px;
+.minerals-images{
+	text-align: center;
 }
 
 #contact{
