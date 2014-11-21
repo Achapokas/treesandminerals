@@ -1,72 +1,75 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<script src="js/jquery-1.11.1.min (1).js"></script>
-<script src="js/main.js"></script>
+	<title>Trees and Minerals</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<script src="js/jquery-1.11.1.min (1).js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<header>
-	<div class="nav">
-		<div class="logo-header">
-			<h1 class="header">trees and minerals</h1>
-		</div>	
-		<ul class="top-navigation">
-	   		<li><a href="#quote">about</a></li>
-	    	<li><a href="#three-images-section">minerals</a></li>
-	   	    <li><a href="#treesrings">trees</a></li>
-	   	    <li><a href="#">contact</li>
-		</ul>
-	</div>
+		<p class="logo">trees and minerals</p>
+		<nav role="navigation">		
+			<ul class="top-navigation">
+		   		<li><a href="#quote">about</a></li>
+		    	<li><a href="#three-images-section">minerals</a></li>
+		   	    <li><a href="#treesrings">trees</a></li>
+		   	    <li><a href="#">contact</li>
+			</ul>
+		</nav>	
 	</header>
-		<div class="main">
-			<div class="carousel">
-				<div id="buttons">
-	        		<a href="#" id="prev">prev</a>
-	        		<a href="#" id="next">next</a>
-	        		<div class="clear"></div>
-	    	</div>
-	    <div class="clear"></div>
-	   	 <div id="slides"> 
-	       	<ul>
-		        <li><img src="images/treeshade.jpg"  alt="a shaded forest"/></li>
-		        <li><img src="images/mountainmoss.jpeg"  alt="mountain landscape"/></li>
-		        <li><img src="images/orange.jpeg"   alt="bright oranges on verdant tree"/></li>
-		        <li><img src="images/treeroad.jpg"   alt="tree lined road in california"/></li>
-		        <li><img src="images/sandandrock.jpeg"   alt="beach and mountains"/></li>
-	        </ul>
-	        <div class="clear"></div>	
-	    </div>
-			</div>
-		<div id="quote">
-			<blockquote>the power of imagination makes us infinite</blockquote>
-			<blockquote class="attribution"> - John Muir</blockquote>
+	<main class="container">
+		<div class="carousel">
+		   	 <div id="slides"> 
+		       	<ul>
+			        <li><img src="images/treeshade.jpg"  alt="a shaded forest"/></li>
+			        <li><img src="images/mountainmoss.jpeg"  alt="mountain landscape"/></li>
+			        <li><img src="images/orange.jpeg"   alt="bright oranges on verdant tree"/></li>
+			        <li><img src="images/treeroad.jpg"   alt="tree lined road in california"/></li>
+			        <li><img src="images/sandandrock.jpeg"   alt="beach and mountains"/></li>
+		        </ul>
+		   	 </div>
 		</div>
-		<div id="three-images-section">
+		<section id="about">
+			<h1>About</h1>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+				<cite class="attribution"> - attribution</cite>
+			</blockquote>
+		</section>
+		<section id="minerals">
+			<h1>Minerals</h1>
 			<img src="images/clouds.jpg" alt="sea grass">
 			<img src="images/treesequoia.jpg" alt="blurry seqouoias">
 			<img src="images/cityscape.jpg" alt="ashley blowing bubbles on a rooftop">
-		</div>
-		<div id="quote">
-			<blockquote>the clearest way into the Universe is through a forest wilderness</blockquote>
-			<blockquote class="attribution"> - John Muir</blockquote>
-		</div>
-		<div id="treesrings">
+		</section>
+		<section id="trees">
+			<h1>trees</h1>
+			<blockquote>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				<cite class="attribution"> - attribution</cite>
+			</blockquote>
+		</section>
+		<section id="contact">
+			<h1>contact</h1>
 			<img src="images/treerings.jpg" alt="tree rings">
 			<div class="layered-quote">
-				<blockquote>The little reed, bending to the force of the wind, soon stood upright again when the storm had passed over</blockquote>
-				<blockquote class="attribution"> - Aesop</blockquote>
-			</div>	
-		</div>	
-	</div>
+				<blockquote>
+					<p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+				<cite class="attribution"> - attributon</cite>
+				</blockquote>
+		</section>	
+	</main>
 	<footer>
-		<ul class="footer-links">
+		<ul>
 			<li><a href="#">about</a></li>
 			<li><a href="#">tree types</a></li>
 			<li><a href="#">mineral class</a></li>
-			<li><a href="#">Copyright &copy; 2014 Ashley Chapokas</a></li>
 		</ul>
+		<p class="copyright">Copyright &copy; 2014 Ashley Chapokas</p>
 	</footer>
 </body>
 </html>
