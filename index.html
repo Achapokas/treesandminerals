@@ -6,14 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-	<script src="js/jquery-1.11.1.min (1).js"></script>
-	<script src="js/main.js"></script>
 </head>
 <body>
-	<header class="top">
+	<header class="primary">
 		<p class="logo">trees and minerals</p>
 		<nav role="navigation">		
-			<ul class="top-navigation">
+			<ul class="primary-navigation">
 		   		<li><a href="#about">about</a></li>
 		    	<li><a href="#mineralsn">minerals</a></li>
 		   	    <li><a href="#trees">trees</a></li>
@@ -22,21 +20,28 @@
 		</nav>	
 	</header>
 	<main class="container">
-		 <div class="hero"> 
-			<img src="images/treeshade.jpg"  alt="a shaded forest"/>
-		</div>
+		 <p class="hero"> 
+<!-- 		 experimenting with srcset. a attribute that loads certain images dependant on browser width
+ -->			<img 
+			srcset="images/treeshade/large.jpg 1700w,
+					images/treeshade/medium.jpg 480w,
+					images/treeshade/small.jpg 480w"
+				src="images/treeshade/medium.jpg"
+			sizes="100%"				  
+			alt="a shaded forest"/>
+		</p>
 		<section id="about">
 			<header>
-				<h1>what is Trees and Minerals?</h1>
+				<h1>what is trees and minerals?</h1>
 			</header>	
-			<div class="column">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+			<div class="columns">
+				<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
 			</div>
-			<div class="column">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+			<div class="columns">
+				<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
 			</div>
-			<div class="column">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+			<div class="columns">
+				<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
 			</div>
 		</section>
 		<section id="minerals">
@@ -44,31 +49,33 @@
 				<h1>minerals</h1>
 			</header>
 			<div class="minerals-images">
-				<img src="images/clouds.jpg" alt="clouds">
-				<img src="images/treesequoia.jpg" alt="blurry seqouoias">
-				<img src="images/cityscape.jpg" alt="ashley blowing bubbles on a rooftop">
+				<p><img src="images/clouds.jpg" alt="clouds"></p>
+				<p><img src="images/treesequoia.jpg" alt="blurry seqouoias"></p>
+				<p><img src="images/cityscape.jpg" alt="ashley blowing bubbles on a rooftop"></p>
 			</div>	
 		</section>
 		<section id="trees">
 			<header>
 				<h1>trees</h1>
 			</header>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		</section>
 		<section id="contact">
 			<header>
 				<h1>contact</h1>
 			</header>	
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		</section>	
 	</main>
 	<footer>
-		<ul>
+		<ul role="navigation">
 			<li><a href="#">about</a></li>
 			<li><a href="#">tree types</a></li>
 			<li><a href="#">mineral class</a></li>
 		</ul>
-		<p class="copyright">Copyright &copy; 2014 Ashley Chapokas</p>
+		<p class="copyright">copyright &copy; 2014 ashley ahapokas</p>
 	</footer>
+	<script src="js/jquery-1.11.1.min (1).js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
