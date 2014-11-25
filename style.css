@@ -136,7 +136,7 @@ footer a:hover{
     transition-timing-function: linear;
 }
 
-.sections{
+section{
 	padding: 70px 0; /*// could be grouped for all sections, then reset for the non-padded ones if that pattern is the majority rule and not the exception*/	
 }
 
@@ -154,7 +154,6 @@ footer a:hover{
 
 #about, #trees{
 	background-color: rgba(77,58,56, 0.9);
-	padding: 70px 0;
 }
 
 #minerals{
