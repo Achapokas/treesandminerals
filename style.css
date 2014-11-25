@@ -52,17 +52,21 @@ table {
 }
 
 /*Custom Styles*/
+<<<<<<< HEAD
 
 * {
 	box-sizing: border-box;
 }
 
+=======
+// It's good you redefine your base styles here
+>>>>>>> e65106e39a80c8cdecdd32e0905e75a4523d54c2
 body{
 	font-family: 'Quattrocento Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, blockquote{
 	font-family: 'Lobster', cursive;
-	text-transform: capitalize;
+	text-transform: capitalize; // good use of CSS to control the design of the font
 }
 
 h1{
@@ -71,11 +75,12 @@ h1{
 }
 
 body{
-	font-size:100%;
+	// this selector is declared twice (see above)
+	font-size:100%; // this property is already set in the Meyerweb reset
 }
 
 img{
-	max-width:100%;
+	max-width:100%; // since you're only utilizing this on the .hero > img, you may want to consider a more specific selector so that maintaining the CSS is more clear
 }
 
 a{
@@ -83,66 +88,68 @@ a{
 	color: #000;
 }
 
-header.top{
+// when you start getting into the layout, you seem to be organizing your selectors randomly, consider grouping your selectors in the same hierarchy as your html
+header.primary{
 	width:100%;
-	position: absolute;
+	position: absolute; // absolute positioning is an OK solution, think about another way to overlay this section on top of the trees graphic
 	top: 0;
 	height: auto;
-	z-index: 100000;
+	z-index: 100000; // Give this a read: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index
+			// Then consider using simple numbers for your layout containers, for example: header {z-index:1} main {z-index:2}
+			// Then you can utilize relative z-index within the main container, rather than trying to remember where everything is at in the stacking order
 }
 
 nav{
-	width: 100%;
+	width: 100%; // you've already defined nav as a block element in the reset, no width is necessary
 	text-align: center;
 }
 
-.logo-header,
 .hero{
 	font-size: 0;
 }
 
 p.logo {
 	text-align: center;
-	width: 100%;
+	width: 100%; // the default width is 100%, this is unecessary 
 	color: #fff;
 	font-family: 'Lobster', cursive;
 	text-transform: capitalize;
 	font-size:40px;
 }
 
-ul.top-navigation{
+ul.primary-navigation{
 	list-style: none;
 	margin: 10px 0;
 }
 
-ul.top-navigation li{
+ul.primary-navigation li{
 	display: inline-block;
 	padding: 0 70px;
-	font-weight: bold;
-	color: #fff;
+	font-weight: bold; // consider keeping the text styling on the element that contains the text, and the parent elements owning the layout styles
+	color: #fff; // since you're declaring the color on the links, without text in the LIs, this is redundant
 }
 
-ul.top-navigation a {
+ul.primary-navigation a {
 	font-size: 18px;
 	color: #fff;
 }
 
-ul.top-navigation a:hover,
-ul.footer-links a:hover{
-	color: rgb(0,109,34);
+ul.primary-navigation a:hover,
+footer a:hover{
+	color: rgb(0,109,34); // the contrast of this color on top of the trees makes the links unreadable
 	text-decoration: underline;
-	transition-duration: 1s;
-    transition-timing-function: linear;
+	transition-duration: 1s; // this is too long, 250ms is a good time frame for an animation, any longer and it's perceived as slow
+    	transition-timing-function: linear;
 }
 
-.column {
+.columns p { // this change allows the pattern to be reused without the overuse of the classess on each child element
 	width: 25%;
 	float: left;
 	padding: 20px;
 }
 
 section#about {
-	overflow: hidden;
+	overflow: hidden; // this is fixing your box model issue with floats, you can target the .columns container to fix the problem now, rather than define it on each section that has .columns
 }
 
 #about, #trees{
@@ -151,7 +158,7 @@ section#about {
 }
 
  #about blockquote,
- #trees blockquote {
+ #trees blockquote { // blockquotes seem to have been removed from the markup, so this is leftover CSS which should be removed
 	text-align: center;
 	font-size: 50px;
 	text-transform: capitalize;
@@ -160,20 +167,20 @@ section#about {
 }
 
 #minerals{
-	padding: 70px 0;
+	padding: 70px 0; // could be grouped for all sections, then reset for the non-padded ones if that pattern is the majority rule and not the exception
 	background-color: rgb(0, 69, 101);
 }
 
-.minerals-images{
+.minerals-images{ // changed this to use the .columns pattern, no longer needed
 	text-align: center;
 }
 
 #contact{
-	position: relative;
+	position: relative; // not sure about the use here, seems leftover
 	text-align: center;
 }
 
-.layered-quote{
+.layered-quote{ // seems like a leftover
 	position: absolute;
 	font-size: 63px;
 	color: #fff;
@@ -184,7 +191,7 @@ footer{
 	margin: 50px 0;
 }
 footer ul{
-	text-align: center;
+	text-align: center; // text style, assign to element that has the text
 }
 
 footer ul li{
