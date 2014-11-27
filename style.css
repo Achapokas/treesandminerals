@@ -75,6 +75,11 @@ a{
 	color: #000;
 }
 
+p{
+	hyphens:auto;
+	line-height: 1.5;
+}
+
 /*Header*/
 
 .primary{
@@ -140,17 +145,25 @@ section{
 	padding: 70px 0; /*// could be grouped for all sections, then reset for the non-padded ones if that pattern is the majority rule and not the exception*/	
 }
 
-.columns{
+
+.row {
 	overflow:hidden;
+	width: 100%;
+	margin-left: auto;
+	max-width: 75rem;
 }
 
-.columns p { /*// this change allows the pattern to be reused without the overuse of the classess on each child element*/
-	width: 25%;
+.row p { /*// this change allows the pattern to be reused without the overuse of the classess on each child element*/
+	width: 27%;
 	display:block;
 	float: left;
-	padding: 20px;
 }
 
+section header{
+	text-align: center;
+	top: -20px;
+	position: relative;
+}
 
 #about, #trees{
 	background-color: rgba(77,58,56, 0.9);
@@ -170,6 +183,12 @@ footer ul li{
 	display: inline-block;
 	padding: 0 70px;
 	text-align: center; // fixed - text style, assign to element that has the text
+}
+
+@media only screen and (min-width){
+  p{
+    hyphens:none;
+  }
 }
 
 
