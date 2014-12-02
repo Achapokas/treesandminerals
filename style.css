@@ -135,14 +135,14 @@ ul.primary-navigation a {
 
 ul.primary-navigation a:hover,
 footer a:hover{
-	color: rgb(178,258,100); /*// the contrast of this color on top of the trees makes the links unreadable*/
+	color: rgb(178,258,100); /*// fixed the contrast of this color on top of the trees makes the links unreadable*/
 	text-decoration: underline;
 	transition-duration: 250ms; /*// fixed-this is too long, 250ms is a good time frame for an animation, any longer and it's perceived as slow*/
     transition-timing-function: linear;
 }
 
 section{
-	padding: 70px 0; /*// could be grouped for all sections, then reset for the non-padded ones if that pattern is the majority rule and not the exception*/	
+	padding: 70px 0; /*// fixed:could be grouped for all sections, then reset for the non-padded ones if that pattern is the majority rule and not the exception*/	
 }
 
 
