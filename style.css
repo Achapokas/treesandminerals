@@ -59,6 +59,7 @@ table {
 // It's good you redefine your base styles here
 body{
 	font-family: 'Quattrocento Sans', sans-serif;
+	font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6, blockquote{
 	font-family: 'Lobster', cursive;
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6, blockquote{
 }
 
 h1{
-	font-size: 30px;
+	font-size: 1.875em;
 	color:#fff;
 }
 
@@ -75,8 +76,14 @@ a{
 	color: #000;
 }
 
-p{
-	hyphens:auto;
+/*The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use.*/
+
+p{ 
+	-ms-word-break: break-all;
+     word-break: break-all;
+     -moz-hyphens: auto;
+    -webkit-hyphens: auto; 
+	hyphens: auto;
 	line-height: 1.5;
 }
 
@@ -84,7 +91,7 @@ p{
 
 .primary{
 	width:100%;
-	position: absolute; // absolute positioning is an OK solution, think about another way to overlay this section on top of the trees graphic
+	position: absolute;/* // absolute positioning is an OK solution, think about another way to overlay this section on top of the trees graphic*/
 	top: 0;
 	height: auto;
 	z-index: 2; 
@@ -113,24 +120,30 @@ p.logo {
 	color: #fff;
 	font-family: 'Lobster', cursive;
 	text-transform: capitalize;
-	font-size:40px;
+	font-size:2.500em;
 }
 
-ul.primary-navigation{
+
+ul.navigation{
 	list-style: none;
-	margin: 10px 0;
 }
 
-ul.primary-navigation li{
+ul.navigation li{
 	display: inline-block;
 	padding: 0 70px;
 }
 
-ul.primary-navigation a {
-	font-size: 18px;
-	color: #fff;
-	font-weight: bold; /*// fixed-consider keeping the text styling on the element that contains the text, and the parent elements owning */the layout styles
+ul.navigation li a{
+	font-size: 1.125em;
+	font-weight: bold; /*// fixed-consider keeping the text styling on the element that contains the text, and the parent elements owning */
+}
 
+ul.primary-navigation{
+	margin: 10px 0;
+}
+
+ul.primary-navigation li a {
+	color: #fff;
 }
 
 ul.primary-navigation a:hover,
@@ -146,18 +159,12 @@ section{
 }
 
 
-.row {
-	overflow:hidden;
-	width: 100%;
-	margin-left: auto;
-	max-width: 75rem;
+
+section div p { /*// this change allows the pattern to be reused without the overuse of the classess on each child element*/
+	width: 19em;
+	padding: 0 10px;
 }
 
-.row p { /*// this change allows the pattern to be reused without the overuse of the classess on each child element*/
-	width: 27%;
-	display:block;
-	float: left;
-}
 
 section header{
 	text-align: center;
@@ -165,11 +172,26 @@ section header{
 	position: relative;
 }
 
+.row {
+	width: 100%;
+	margin-left: auto;
+	max-width: 75em;
+}
+
+.row > p{
+	display: inline-block;
+}
+
+.column{
+	float:left;
+}
+
+
 #about, #trees{
 	background-color: rgba(77,58,56, 0.9);
 }
 
-#minerals{
+#minerals, #contact{
 	background-color: rgb(0, 69, 101);
 }
 
@@ -179,15 +201,24 @@ footer{
 	margin: 50px 0;
 }
 
-footer ul li{
-	display: inline-block;
-	padding: 0 70px;
-	text-align: center; // fixed - text style, assign to element that has the text
+.footer-navigation{
+	float:left;
+}
+
+.footer-navigation li a{
+	color:#000;
+	text-decoration:none;
+	line-height: 1.5;
+}
+
+.footer-navigation p{
+	float:left;
 }
 
 @media only screen and (min-width){
   p{
-    hyphens:none;
+  	-moz-hyphens: none;
+    hyphens: none;
   }
 }
 
