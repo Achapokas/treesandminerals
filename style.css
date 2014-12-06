@@ -52,8 +52,10 @@ table {
 }
 
 /*Base Styles*/
-* {
-	box-sizing: border-box;
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 }
 
 // It's good you redefine your base styles here
@@ -110,7 +112,7 @@ main{
 	font-size: 0;
 }
 
-.hero > img{
+img{
 	max-width:100%; /*// since you're only utilizing this on the .hero > img, you may want to consider a more specific selector so that maintaining the CSS is more clear
 */
 }
@@ -163,6 +165,8 @@ section{
 section div p { /*// this change allows the pattern to be reused without the overuse of the classess on each child element*/
 	width: 19em;
 	padding: 0 10px;
+	font-size: 1.3em;
+  	line-height: 1.7em;
 }
 
 
@@ -175,15 +179,37 @@ section header{
 .row {
 	width: 100%;
 	margin-left: auto;
-	max-width: 75em;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 75rem;
+	overflow:hidden;
+}
+
+.row:before, .row:after {
+	content: " ";
+	display: table;
 }
 
 .row > p{
 	display: inline-block;
 }
 
+.row > p img{
+	padding: 0 10px;
+}
+
 .column{
 	float:left;
+	margin: 0 15px;
+}
+
+.column > p{
+	padding: 0 10px 10px 0;
+}
+
+figure{
+	float: left;
 }
 
 
@@ -213,6 +239,7 @@ footer{
 
 .footer-navigation p{
 	float:left;
+	display:inline-block;
 }
 
 @media only screen and (min-width){
